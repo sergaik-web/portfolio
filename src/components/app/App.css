@@ -2,7 +2,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  margin-left: 140px;
+  background-color: cadetblue;
 }
 
 .aside {
@@ -12,9 +13,9 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100px;
+  width: 140px;
   z-index: 8;
-  background-color: darkseagreen;
+  background-color: indianred;
 }
 
 .main {
