@@ -3,6 +3,9 @@
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -11,10 +14,13 @@
     width: 84px;
     height: 84px;
     margin: 10px;
+    transition: box-shadow 0.5s;
 }
 
 .logo:hover {
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(270,250,250, 0.3);
+    box-shadow: 0 0 2px 4px rgba(250,250,250, 0.5);
+    transition: box-shadow 0.5s;
 }
 
 .logo h1 {

@@ -5,10 +5,13 @@
     width: 84px;
     height: 84px;
     margin: 10px;
+    transition: box-shadow 0.5s;
 }
 
 .leftMenuItem:hover {
     background-color: rgba(0,0,0, 0.3);
+    box-shadow: 0 0 2px 4px rgba(0,0,0, 0.5);
+    transition: box-shadow 0.5s;
 }
 
 
