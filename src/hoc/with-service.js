@@ -1,10 +1,13 @@
 import React from "react";
+import MyContext from "../context";
 
 const WithService = () => (Wrapper) => {
   return (props) => {
-    return (service) => {
-      <Wrapper {...props} service={service} />;
-    };
+    return (
+    <MyContext.Consumer>
+      {(Service)=>{return <Wrapper {...props} service={Service} />}}
+    </MyContext.Consumer>
+    )
   };
 };
 

@@ -4,8 +4,11 @@ import img1 from "../../img/display.svg";
 import img2 from "../../img/treasure_chest.svg";
 import img3 from "../../img/cloud.svg";
 import img4 from "../../img/buck.svg";
+import WithService from "../../../../hoc";
 
-export default function MenuListItem() {
+const MenuListItem = (myService) => {
+  myService.service.getMenuItem().then((e) => console.log(e));
+
   const dataItemLeftPanel = [
     { label: "Навыки", ico: img1, popup: "Soft/Hard skills" },
     { label: "Проекты", ico: img2, popup: "Portfolio" },
@@ -30,4 +33,6 @@ export default function MenuListItem() {
       </li>
     );
   });
-}
+};
+
+export default WithService()(MenuListItem);

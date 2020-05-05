@@ -6,9 +6,7 @@ export default function MainPanel() {
     <>
       <header className={"header"}>
         <br />
-        <p>
-          <h2>FRONTEND JavaScript РАЗРАБОТЧИК</h2>
-        </p>
+        <h2>FRONTEND JavaScript РАЗРАБОТЧИК</h2>
       </header>
 
       <section className={"section"}>

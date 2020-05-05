@@ -1,5 +1,5 @@
 #imgLogo {
-    animation: rotate-center 10s linear infinite both;
+    animation: rotate-center 8s ease infinite both;
 }
 
 .logo {
@@ -29,7 +29,10 @@
     0% {
         transform: rotate(0);
     }
-    100% {
+    50% {
         transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0);
     }
 }
