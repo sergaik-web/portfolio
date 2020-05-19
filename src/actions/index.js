@@ -1,2 +1,2 @@
-import { dec } from "./actions";
-export default { dec };
+import { printH2 } from "./actions";
+export default { printH2 };
