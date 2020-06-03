@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/app/App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./components/App/App";
+import { Provider } from "react-redux";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 ReactDOM.render(
-    <App />,
-  document.getElementById('root')
+  <Provider store={}>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </Provider>,
+  document.getElementById("root")
 );
-
-
