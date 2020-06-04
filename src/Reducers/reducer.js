@@ -1,20 +1,18 @@
 const initialState = {
-  text: ''
+  text: "",
 };
 
 const reducer = (state = initialState, actions) => {
   switch (actions.type) {
-
-    case 'NEW_TEXT':
+    case "NEW_TEXT":
       return {
-        text: actions.text
-      }
+        text: actions.text,
+      };
 
     default:
       return {
-        ...state
-      }
-      
+        ...state,
+      };
   }
 };
 
