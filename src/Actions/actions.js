@@ -1,7 +1,7 @@
-const test = () => {
+const test = (text) => {
   return {
     type: "NEW_TEXT",
-    text: "new text",
+    text: text,
   };
 };
 

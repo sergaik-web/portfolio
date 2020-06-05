@@ -5,10 +5,12 @@ const Hoc = () => (Elem) => {
   return (props) => {
     return (
       <Context.Consumer>
-        {(services) => {return <Elem {...props} service={services}/>}}
+        {(services) => {
+          return <Elem {...props} service={services} />;
+        }}
       </Context.Consumer>
-    )
-  }
+    );
+  };
 };
 
 export default Hoc;

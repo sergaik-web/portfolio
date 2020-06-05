@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./components/App/App";
+import App from "./Components/App/App";
 import { Provider } from "react-redux";
-import ErrorBoundary from "./components/ErrorBoundary";
+import ErrorBoundary from "./Components/ErrorBoundary";
 import Store from "./Store";
 import Services from "./Services";
 import Context from "./Context";
