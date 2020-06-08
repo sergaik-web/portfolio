@@ -17,7 +17,7 @@
   width: 70%;
   height: 70%;
   background: #2b4856;
-  box-shadow: 0 0 15vh 2vh black;
+  box-shadow: 0 0 15vh 2vh black ;
   overflow: hidden;
 }
 
@@ -32,7 +32,6 @@
   background: linear-gradient(90deg, #3c5064, #7896b4) center center;
   background-size: cover;
 }
-
 .fog::before,
 .fog::after,
 .fog div::before,
@@ -48,24 +47,20 @@
   background-position: center;
   background-repeat: repeat-x;
 }
-
 .fog div::before,
-.fog div::after {
+.fog div::after    {
   left: 100%;
 }
-
 .fog::before,
 .fog div::before {
   background-image: url("../../img/fog-1.png");
   animation: fogmove 70s linear 0s infinite;
 }
-
 .fog::after,
 .fog div::after {
   background-image: url("../../img/fog-2.png");
   animation: fogmove 40s linear 0s infinite;
 }
-
 @keyframes fogmove {
   from {
     transform: translate3d(0, 0, 0);
@@ -74,5 +69,3 @@
     transform: translate3d(-100%, 0, 0);
   }
 }
-
-/*# sourceMappingURL=App.css.map */

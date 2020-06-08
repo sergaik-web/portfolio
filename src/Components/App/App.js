@@ -1,29 +1,20 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import { test } from "../../Actions/actions";
 import { connect } from "react-redux";
+import MenuList from "../MenuList";
 
 function App(state) {
   const text = state.text;
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>{text}</p>
-        <input
-          id={"input"}
-          onChange={(event) => state.test(event.target.value)}
-          type={"text"}
-          placeholder={"введите текст"}
-        />
-        <button
-          onClick={() =>
-            state.test(document.getElementById("input").value + "123")
-          }
-        >
-          Текст
-        </button>
-      </header>
+      <div className="fog">
+        <div></div>
+      </div>
+      <div className="app-window">
+        <MenuList />
+      </div>
     </div>
   );
 }
