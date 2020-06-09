@@ -9,17 +9,49 @@
   z-index: 10;
 }
 
-.app-window {
+#app-window {
   z-index: 20;
   position: absolute;
   top: 15%;
   left: 15%;
   width: 70%;
   height: 70%;
-  background: #2b4856;
+  background: url("../../img/BG1.jpg") center;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0 0 15vh 2vh black ;
   overflow: hidden;
 }
+
+.bg-item {
+  position: absolute;
+  width: 1006px;
+  height: 564px;
+  background: url("../../img/BG2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0 0 15vh 2vh black ;
+}
+
+.bg-item:nth-child(1) {
+  top: 100%;
+  left: -40%;
+  animation:bg-item-anim1 2s both
+}
+
+.bg-item:nth-child(2) {
+  top: 100%;
+  left: 100%;
+  animation:bg-item-anim2 2s both
+}
+
+.bg-item:nth-child(3) {
+  top: -100%;
+  left: 0;
+  animation:bg-item-anim3 2s both
+}
+
+
 
 .fog {
   z-index: 1;
@@ -68,4 +100,19 @@
   to {
     transform: translate3d(-100%, 0, 0);
   }
+}
+
+@keyframes bg-item-anim1{
+  0%{opacity:0}
+  100%{transform:translateY(-100px) rotate(60deg);opacity:0.9}
+}
+
+@keyframes bg-item-anim2{
+  0%{opacity:0}
+  100%{transform:translateX(-620px) translateY(-200px)  rotate(-30deg);opacity:1}
+}
+
+@keyframes bg-item-anim3{
+  0%{opacity:0}
+  100%{transform:translateX(-220px) translateY(200px) rotate(-30deg);opacity:1}
 }
