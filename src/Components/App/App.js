@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import MenuList from "../MenuList";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <div className={"bg-item"}></div>
         <div className={"bg-item"}></div>
         <div className={"bg-item"}></div>
+        <MenuList />
       </div>
     </div>
   );
