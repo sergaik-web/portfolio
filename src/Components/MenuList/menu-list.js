@@ -18,16 +18,6 @@ export default class MenuList extends React.Component {
   }
 
   render() {
-    return (
-      <div
-        style={{
-          top: this.state.delta / 10 + "px",
-          left: this.state.delta / 10 + "px",
-        }}
-        id={"left-panel"}
-      >
-        {this.state.delta}
-      </div>
-    );
+    return <div id={"left-panel"}>{`М Е Н Ю`}</div>;
   }
 }

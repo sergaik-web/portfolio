@@ -24,24 +24,7 @@ export default class App extends React.Component {
         <div className="fog">
           <div></div>
         </div>
-        <div id="app-window">
-          <div
-            style={{ transform: "rotate(" + this.state.delta / 150 + "deg)" }}
-            className={"bg-item"}
-          ></div>
-          <div
-            style={{ transform: "rotate(" + this.state.delta / 100 + "deg)" }}
-            className={"bg-item"}
-          ></div>
-          <div
-            style={{
-              transform:
-                "rotate(" + Math.sin(this.state.delta / 10000) * 200 + "deg)",
-            }}
-            className={"bg-item"}
-          ></div>
-          <MenuList />
-        </div>
+        <MenuList />
       </div>
     );
   }
