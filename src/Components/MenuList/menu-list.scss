@@ -1,14 +1,16 @@
 #left-panel {
   position: absolute;
-  width: 150px;
+  width: 20vw;
   height: 35px;
-  top: 100px;
+  top: 120px;
   left: 100px;
   color: darkred;
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   padding-left: 5px;
   align-items: center;
-  font-size: 20px;
-  font-weight: bold;
+  font-family: Marker Felt, fantasy;
+  font-size: 25px;
   cursor: default;
+  transform: rotate3d(1, 1, 1, -15deg);
 }

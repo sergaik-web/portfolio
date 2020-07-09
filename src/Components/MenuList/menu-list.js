@@ -18,6 +18,6 @@ export default class MenuList extends React.Component {
   }
 
   render() {
-    return <div id={"left-panel"}>{`М Е Н Ю`}</div>;
+    return <div id={"left-panel"}>{`МЕНЮ`}</div>;
   }
 }
