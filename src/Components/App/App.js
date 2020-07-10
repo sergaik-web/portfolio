@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.scss";
 import MenuList from "../MenuList";
-import VideoMp4 from "./video/video.mp4";
-import VideoWeb from "./video/video.webm";
+import BgVideo from "../BgVideo/BgVideo";
 
 export default class App extends React.Component {
   state = {
@@ -10,6 +9,8 @@ export default class App extends React.Component {
   };
 
   componentDidMount() {
+    let video = document.querySelector("video");
+    video.playbackRate = 0;
     let delta = 0;
     document.addEventListener("wheel", (e) => {
       delta += e.deltaY || e.detail || e.wheelDelta;
@@ -17,27 +18,14 @@ export default class App extends React.Component {
         delta = 0;
       }
       this.setState({ delta });
+      video.playbackRate = delta / 500;
     });
   }
 
   render() {
     return (
       <div className="App">
-        <div id="video-bg">
-          <video
-            width="100%"
-            height="auto"
-            preload="auto"
-            loop="loop"
-            muted="muted"
-          >
-            <source src={VideoMp4} type="video/mp4" />
-            <source src={VideoWeb} type="video/webm" />
-          </video>
-        </div>
-        <div className="fog">
-          <div></div>
-        </div>
+        <BgVideo />
         <MenuList />
       </div>
     );
