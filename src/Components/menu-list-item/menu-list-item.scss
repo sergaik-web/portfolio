@@ -1,0 +1,31 @@
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  width: 150px;
+  height: 170px;
+  color: #ccc;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(29, 30, 34, 0.9);
+  margin: 1px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: 1s;
+}
+
+.menu-item:nth-child(2){
+  transform: translate(78px, 135px);
+}
+.menu-item:nth-child(3){
+  transform: translate(-78px, 135px);
+}
+.menu-item:nth-child(4){
+  transform: translate(0px, 270px);
+}
+.menu-item:nth-child(5){
+  transform: translate(78px, 405px);
+}
+.menu-item:nth-child(6){
+  transform: translate(-78px, 405px);
+}

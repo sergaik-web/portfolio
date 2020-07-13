@@ -9,16 +9,18 @@ export default class App extends React.Component {
   };
 
   componentDidMount() {
-    let video = document.querySelector("video");
+    let video = document.querySelector("#bg-video");
     video.playbackRate = 0;
     let delta = 0;
     document.addEventListener("wheel", (e) => {
       delta += e.deltaY || e.detail || e.wheelDelta;
       if (delta < 0) {
         delta = 0;
+      } else if (delta >= 8000) {
+        delta = 8000;
       }
       this.setState({ delta });
-      video.playbackRate = delta / 500;
+      video.playbackRate = delta / 1000;
     });
   }
 

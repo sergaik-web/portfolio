@@ -1,4 +1,4 @@
-#video-bg {
+#video-container {
   position: fixed;
   top: 0;
   right: 0;
@@ -8,7 +8,7 @@
   background-size: cover;
 }
 
-#video-bg > video {
+#video-container > video {
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
 }
 
 @supports (object-fit: cover) {
-  #video-bg > video {
+  #video-container > video {
     top: 0;
     left: 0;
     width: 100%;
