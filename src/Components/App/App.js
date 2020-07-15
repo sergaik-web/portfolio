@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
-import MenuList from "../MenuList";
+import LeftMenuList from "../left-menu-list";
+import RightMenuList from "../right-menu-list";
 import BgVideo from "../BgVideo/BgVideo";
 
 export default class App extends React.Component {
@@ -28,7 +29,8 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <BgVideo />
-        <MenuList />
+        <RightMenuList />
+        <LeftMenuList />
       </div>
     );
   }

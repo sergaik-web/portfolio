@@ -2,30 +2,27 @@
   cursor: pointer;
   display: flex;
   position: absolute;
-  width: 150px;
-  height: 170px;
-  color: #ccc;
+  width: 200px;
+  height: 220px;
+  color: white;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: rgba(29, 30, 34, 0.9);
+  background: rgba(29, 30, 34, 0.8);
   margin: 1px;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   transition: 1s;
 }
 
-.menu-item:nth-child(2){
-  transform: translate(78px, 135px);
+.left {
+  transform: translate(98px, 180px);
 }
-.menu-item:nth-child(3){
-  transform: translate(-78px, 135px);
+
+.right {
+  transform: translate(-98px, 180px);
 }
-.menu-item:nth-child(4){
-  transform: translate(0px, 270px);
+
+li:nth-child(3){
+  transform: translate(0px, 360px);
 }
-.menu-item:nth-child(5){
-  transform: translate(78px, 405px);
-}
-.menu-item:nth-child(6){
-  transform: translate(-78px, 405px);
-}
+
