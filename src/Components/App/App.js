@@ -3,6 +3,7 @@ import "./App.scss";
 import LeftMenuList from "../left-menu-list";
 import RightMenuList from "../right-menu-list";
 import BgVideo from "../BgVideo/BgVideo";
+import Scroll from "../scroll";
 
 export default class App extends React.Component {
   state = {
@@ -29,6 +30,7 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <BgVideo />
+        <Scroll />
         <RightMenuList />
         <LeftMenuList />
       </div>
