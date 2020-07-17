@@ -23,8 +23,6 @@ i {
 @keyframes shake-vertical{
   0%,
   100%{transform:translateY(0)}
-  10%,30%,50%,70%{transform:translateY(-4px)}
-  20%,40%,60%{transform:translateY(4px)}
-  80%{transform:translateY(4px)}
-  90%{transform:translateY(-4px)}
+  5%,25%,45%,65%,85%{transform:translateY(-4px)}
+  15%,35%,55%,75%,95%{transform:translateY(4px)}
 }
