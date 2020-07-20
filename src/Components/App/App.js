@@ -5,25 +5,12 @@ import RightMenuList from "../right-menu-list";
 import BgVideo from "../BgVideo/BgVideo";
 import Scroll from "../scroll";
 import { connect } from "react-redux";
+import { scrollPage } from "../../Actions/actions";
 
 class App extends React.Component {
-  state = {
-    delta: 0,
-  };
-
   componentDidMount() {
-    let video = document.querySelector("#bg-video");
-    video.playbackRate = 0;
-    let delta = 0;
     document.addEventListener("wheel", (e) => {
-      delta += e.deltaY || e.detail || e.wheelDelta;
-      if (delta < 0) {
-        delta = 0;
-      } else if (delta >= 8000) {
-        delta = 8000;
-      }
-      this.setState({ delta });
-      video.playbackRate = delta / 1000;
+      bgAnimation(this.props.scrollPage, this.props.scroll, e);
     });
   }
 
@@ -39,7 +26,27 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = () => {};
-const mapDispatchToProps = () => {};
+const bgAnimation = (func, scroll, e) => {
+  let video = document.querySelector("#bg-video");
+  video.playbackRate = 0;
+  let delta = 0;
+  delta += e.deltaY || e.detail || e.wheelDelta;
+  if (delta < 0) {
+    delta = 0;
+  } else if (delta >= 8000) {
+    delta = 8000;
+  }
+  console.log(delta, func(delta), scroll);
+  func(delta);
+  video.playbackRate = scroll / 1000;
+};
+
+const mapStateToProps = (state) => {
+  return {
+    scroll: state.scroll,
+  };
+};
+
+const mapDispatchToProps = { scrollPage };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

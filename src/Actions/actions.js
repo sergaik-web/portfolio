@@ -1,7 +1,7 @@
-const scrollPage = (cord) => {
+const scrollPage = (scroll) => {
   return {
     type: "SCROLL_PAGE",
-    scroll: cord,
+    scroll: scroll,
   };
 };
 
