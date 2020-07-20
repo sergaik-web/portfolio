@@ -1,2 +1,2 @@
-import { test } from "./actions";
-export default { test };
+import { scrollPage } from "./actions";
+export default { scrollPage };

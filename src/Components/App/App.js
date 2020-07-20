@@ -4,8 +4,9 @@ import LeftMenuList from "../left-menu-list";
 import RightMenuList from "../right-menu-list";
 import BgVideo from "../BgVideo/BgVideo";
 import Scroll from "../scroll";
+import { connect } from "react-redux";
 
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
     delta: 0,
   };
@@ -37,3 +38,8 @@ export default class App extends React.Component {
     );
   }
 }
+
+const mapStateToProps = () => {};
+const mapDispatchToProps = () => {};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

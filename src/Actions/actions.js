@@ -1,8 +1,8 @@
-const test = (text) => {
+const scrollPage = (cord) => {
   return {
-    type: "NEW_TEXT",
-    text: text,
+    type: "SCROLL_PAGE",
+    scroll: cord,
   };
 };
 
-export { test };
+export { scrollPage };

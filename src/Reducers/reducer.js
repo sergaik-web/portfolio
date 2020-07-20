@@ -1,12 +1,13 @@
 const initialState = {
-  text: "",
+  scroll: 0,
 };
 
 const reducer = (state = initialState, actions) => {
   switch (actions.type) {
-    case "NEW_TEXT":
+    case "SCROLL_PAGE":
       return {
-        text: actions.text,
+        ...state,
+        scroll: actions.scroll,
       };
 
     default:
