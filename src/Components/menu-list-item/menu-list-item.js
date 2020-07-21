@@ -3,7 +3,6 @@ import "./menu-list-item.scss";
 
 export default class MenuListItem extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <>
         <div className="bg-menu-item" />

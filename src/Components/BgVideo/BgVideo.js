@@ -13,7 +13,6 @@ const BgVideo = () => {
         preload="auto"
         loop="loop"
         muted="muted"
-        autoPlay="autoPlay"
       >
         <source src={VideoMp4} type="video/mp4" />
       </video>
