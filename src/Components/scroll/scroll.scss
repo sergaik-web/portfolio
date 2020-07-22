@@ -15,9 +15,9 @@
 }
 
 .active {
-  background: rgba(128, 128, 128, 0.6);
-  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 100% 0%);
-  transform: translate(0, 275%) rotate(180deg) scale(0.8);
+  background: rgba(29, 30, 34, 0.9);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transform: translate(0, 300%) rotate(180deg) ;
   i {
     color: darkred;
     font-size: 32px;
