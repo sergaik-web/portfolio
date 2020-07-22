@@ -6,14 +6,15 @@ import BgVideo from "../BgVideo/BgVideo";
 import Scroll from "../scroll";
 import bgAnimation from "../../scripts/bgAnimation";
 import { connect } from "react-redux";
-import {scrollPage} from "../../Actions/actions";
+import { scrollPage } from "../../Actions/actions";
 
 class App extends React.Component {
   componentDidMount() {
-    this.writeScrollValue(this.props.scroll);
+    this.writeScrollValue();
   }
 
-  writeScrollValue(delta) {
+  writeScrollValue() {
+    let delta = this.props.scroll;
     document.addEventListener("wheel", (e) => {
       delta += e.deltaY || e.detail || e.wheelDelta;
       if (delta < 0) {
@@ -22,8 +23,8 @@ class App extends React.Component {
         delta = 8000;
       }
       this.props.scrollPage(delta);
-      bgAnimation(this.props.scroll);
-    })
+      bgAnimation(delta);
+    });
   }
 
   render() {
@@ -40,8 +41,8 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    scroll: state.scroll
-  }
+    scroll: state.scroll,
+  };
 };
 
 const mapDispatchToProps = { scrollPage };
