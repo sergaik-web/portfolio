@@ -10,12 +10,12 @@ import { scrollPage } from "../../Actions/actions";
 
 class App extends React.Component {
   componentDidMount() {
-    this.writeScrollValue();
+    this.writeScrollValue(this.props.scroll);
   }
 
-  writeScrollValue() {
-    let delta = this.props.scroll;
+  writeScrollValue(delta = 0) {
     document.addEventListener("wheel", (e) => {
+      this.props.scroll === 0 ? (delta = 0) : (delta = this.props.scroll);
       delta += e.deltaY || e.detail || e.wheelDelta;
       if (delta < 0) {
         delta = 0;
