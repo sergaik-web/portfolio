@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./scroll.scss";
 import { connect } from "react-redux";
 import { scrollPage } from "../../Actions/actions";
@@ -16,6 +16,10 @@ const Scroll = (props) => {
     props.scrollPage(0);
     bgAnimation(0);
   };
+
+  useEffect(() => {
+    document.title = `вы промотали страницу на ${scrollValue} пикселей`;
+  });
 
   return (
     <div className={scrollClassName} onClick={clickToScroll}>
