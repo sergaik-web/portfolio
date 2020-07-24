@@ -1,25 +1,25 @@
 import React from "react";
 import "./menu-list-item.scss";
 
-export default class MenuListItem extends React.Component {
-  render() {
-    return (
-      <>
-        <div className="bg-menu-item" />
-        <div className="bg-menu-item" />
-        <div className={`bg-menu-item ${this.props.position}`} />
-        <ul className="menu-list">
-          <li className="menu-item">
-            <span>{this.props.items[0]}</span>
-          </li>
-          <li className={`menu-item ${this.props.position}`}>
-            <span>{this.props.items[1]}</span>
-          </li>
-          <li className="menu-item">
-            <span>{this.props.items[2]}</span>
-          </li>
-        </ul>
-      </>
-    );
-  }
-}
+const MenuListItem = (props) => {
+  return (
+    <>
+      <div className="bg-menu-item" />
+      <div className="bg-menu-item" />
+      <div className={`bg-menu-item ${props.position}`} />
+      <ul className="menu-list">
+        <li className="menu-item">
+          <span>{props.items[0]}</span>
+        </li>
+        <li className={`menu-item ${props.position}`}>
+          <span>{props.items[1]}</span>
+        </li>
+        <li className="menu-item">
+          <span>{props.items[2]}</span>
+        </li>
+      </ul>
+    </>
+  );
+};
+
+export default MenuListItem;
