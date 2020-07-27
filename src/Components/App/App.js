@@ -8,28 +8,32 @@ import bgAnimation from "../../scripts/bgAnimation";
 import { connect } from "react-redux";
 import { scrollPage } from "../../Actions/actions";
 
-const App = (props) => {
-  document.addEventListener("wheel", (e) => {
-    let delta = (e.deltaY || e.detail || e.wheelDelta) + props.scroll;
-    if (delta < 0) {
-      delta = 0;
-    } else if (delta >= 8000) {
-      delta = 8000;
-    }
-    console.log(delta, props.scroll);
-    props.scrollPage(delta);
-    bgAnimation(delta);
-  });
+class App extends React.Component {
+  componentDidMount() {
+    document.addEventListener("wheel", (e) => {
+      let delta = (e.deltaY || e.detail || e.wheelDelta) + this.props.scroll;
+      if (delta < 0) {
+        delta = 0;
+      } else if (delta >= 8000) {
+        delta = 8000;
+      }
+      console.log(delta, this.props.scroll);
+      this.props.scrollPage(delta);
+      bgAnimation(delta);
+    });
+  }
 
-  return (
-    <div className="App">
-      <BgVideo />
-      <Scroll />
-      <RightMenuList />
-      <LeftMenuList />
-    </div>
-  );
-};
+  render() {
+    return (
+      <div className="App">
+        <BgVideo />
+        <Scroll />
+        <RightMenuList />
+        <LeftMenuList />
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = (state) => {
   return {
