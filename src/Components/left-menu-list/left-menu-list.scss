@@ -1,11 +1,11 @@
 #left-panel {
   position: absolute;
   left: 50px;
-  top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 5px;
   font-size: 20px;
   cursor: default;
+  transform: translate(0, -300px);
 }
