@@ -33,11 +33,11 @@
 }
 
 .left {
-  transform: translate(108px, 180px);
+  animation: leftAnim 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .right {
-  transform: translate(-108px, 180px);
+  animation: rightAnim 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 li:nth-last-child(3){
@@ -46,4 +46,26 @@ li:nth-last-child(3){
 
 .bg-menu-item:nth-last-child(3){
   transform: translate(0px, 360px);
+}
+
+@keyframes leftAnim {
+  0% {
+    transform: translate(-1000px, 180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(108px, 180px);
+    opacity: 1;
+  }
+}
+
+@keyframes rightAnim {
+  0% {
+    transform: translate(1000px, 180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-108px, 180px);
+    opacity: 1;
+  }
 }
