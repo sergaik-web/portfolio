@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import LeftMenuList from "../left-menu-list";
 import RightMenuList from "../right-menu-list";
