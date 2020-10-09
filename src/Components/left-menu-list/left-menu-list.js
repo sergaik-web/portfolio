@@ -3,7 +3,7 @@ import "./left-menu-list.scss";
 import MenuListItem from "../menu-list-item";
 
 const LeftMenuList = () => {
-  const items = ["ГЛАВНАЯ", "ТЕХНОЛОГИИ", "РАБОТЫ"];
+  const items = ["X-CHECK RSS", "SONG BIRDS", "КАНЦЛЕР ГРУПП"];
 
   return (
     <nav id={"left-panel"}>
