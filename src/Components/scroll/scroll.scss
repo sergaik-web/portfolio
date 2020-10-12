@@ -12,6 +12,7 @@
   margin: 1px;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   transition: 1s;
+  bottom: 43%;
 }
 
 .active {
@@ -19,12 +20,17 @@
   width: 90px;
   height: 100px;
   clip-path: polygon(0% 25%, 50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%);
-  transform: translate(0, 200%) rotate(180deg) scale(0.7);
+  bottom: 4%;
+  transform: scale(0.7);
   i {
     color: darkred;
     font-size: 32px;
     animation:shake-vertical 3s linear infinite both
   }
+}
+
+.endPage {
+  transform: rotate(180deg) scale(0.7);
 }
 
 i {
